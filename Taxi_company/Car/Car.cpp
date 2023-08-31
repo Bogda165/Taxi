@@ -56,6 +56,55 @@ void Car::show()const{
     cout << "   Amount of the dors : " << dors_n << endl;
 }
 
+istream& operator>>(istream& is, Car& obj){
+    string tmp;
+    double tmp2;
+    int tmpi;
+    cout << "Reading Car...\n";
+    cout << "   Enter car model: ";
+    is >> tmp;
+    obj.setName(tmp);
+    cout << "   Enter manufacturer name: ";
+    is >> tmp;
+    obj.setManufacturer(tmp);
+    
+    cout << "   Enter max speed: ";
+    is >> tmp2;
+    obj.setMaxSpeed(tmp2);
+    cout << "   Enter time from 1 to 100: ";
+    is >> tmp2;
+    obj.setRacing(tmp2);
+    cout << "   Enter weight: ";
+    is >> tmp2;
+    obj.setWeight(tmp2);
+    
+    cout << "   Enter color of the car: ";
+    is >> tmp;
+    obj.setColor(tmp);
+    cout << "   Enter max amount of passengers: ";
+    is >> tmpi;
+    obj.setPassenger(tmpi);
+    cout << "   Enter amount of dors: ";
+    is >> tmpi;
+    obj.setDors_n(tmpi);
+    
+    cout << "   Enter price of the car: ";
+    is >> tmp2;
+    obj.setPrice(tmp2);
+    cout << "Enter creation date ";
+    is >> obj.creation;
+    cout << "   Enter type of the car\n";
+    cout << "   A, B, C, D, E, F, M, S, J: ";
+    is >> tmp;
+    obj.setType_c(tmp);
+    
+    is >> obj.engine;
+    
+    
+    cout << "Car Created.\n";
+    return is;
+}
+
 
 void Car::showC()const{
     cout << "--------------Car-------------\n";
@@ -65,3 +114,5 @@ void Car::showC()const{
     cout << "   Model type : " << type_c << endl;
     cout << "   Amount of the dors : " << dors_n << endl;
 }
+
+

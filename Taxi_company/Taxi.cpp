@@ -122,3 +122,46 @@ void Taxi::showInfo_for_customers()const{
     vehicle.showC();
     cout << "   Vehicle's number : " << number << endl;
 }
+
+istream& operator>>(istream& is, Taxi& obj){
+    string tmp;
+    int tmp2;
+    //garage
+
+    Car item1("Collora", "Toyota", 180, 12.6, 1735, "white", 4, 27350, Date(12, 4, 2018), "C", Engine("Bensin", 4, "V", 99, 128), 4);
+    Car item2("Fiest", "Ford", 230, 10.5, 1217, "blue", 5, 32700, Date(1, 1, 2022), "A", Engine("Bensin", 3, "W", 197, 320), 5);
+    Car item3("M5 Competition", "BMW", 305, 3.3, 1970, "black", 4, 111850, Date(1, 3, 2021), "S", Engine("Bensin", 8, "V", 617, 750), 4);
+    cout << "Reading Taxi: \n";
+    
+    cout << "   Enter driver's name: ";
+    is >> tmp;
+    obj.setName(tmp);
+    cout << "   Enter driver's surname: ";
+    is >> tmp;
+    obj.setSurname(tmp);
+    cout << "   Enter driver's number: ";
+    is >> tmp;
+    obj.setNumber(tmp);
+    cout << "   Creation of drivers car :\n";
+    cout << "   You can choose from cars in our garage: \n";
+    cout << "       1.Toyota Carolla" << endl;
+    cout << "       2.Ford Fiesta" << endl;
+    cout << "       3.BMW M5" << endl;
+    cout << "       0.Create your own" << endl;
+    cout << "   ";
+    is >> tmp2;
+    if(tmp2 == 1){
+        obj.setVehicle(item1);
+    }else if(tmp2 == 2){
+        obj.setVehicle(item2);
+    }else if(tmp2 == 3){
+        obj.setVehicle(item3);
+    }else if(tmp2 == 0){
+        Car tmpCar;
+        cin >> tmpCar;
+        obj.setVehicle(tmpCar);
+    }
+    cout << "Taxi created\n";
+    
+    return is;
+}

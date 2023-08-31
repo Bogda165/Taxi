@@ -96,4 +96,36 @@ public:
         cout << endl;
         cout << "  ----------------------------\n";
     }
+    
+    friend istream& operator>>(istream& is, Engine& obj){
+        int tmp;
+        string tmp2;
+        
+        cout << "   Engine creation : \n";
+        
+        cout << "       Enter hp : ";
+        is >> tmp;
+        obj.setHp(tmp);
+        cout << "       Enter torque : ";
+        is >> tmp;
+        obj.setTorque(tmp);
+        
+        cout << "       Enter type\n";
+        cout << "       \"Bensin, Disle, Gass, Electic\": ";
+        is >> tmp2;
+        obj.setType(tmp2);
+        
+        if(obj.getType()!= "Electric"){
+            cout << "       Enter cylinders: ";
+            is >> tmp;
+            obj.setCylinders(tmp);
+            cout << "       Enter cylinders position\n";
+            cout << "       \"V, W, Flat, Others\": ";
+            is >> tmp;
+            obj.setCylinders(tmp);
+        }
+         
+        cout << "    Engine created.\n";
+        return is;
+    }
 };

@@ -13,11 +13,10 @@
 
 int main(int argc, const char * argv[]) {
     Car item1("Collora", "Toyota", 180, 12.6, 1735, "white", 4, 27350, Date(12, 4, 2018), "C", Engine("Bensin", 6, "V", 99, 128), 4);
-    Taxi Bolt("Bohdan", "Koval", item1, true, "AX4046EC");
-    Bolt.setWorking(false);
-    Bolt.setWorking(false);
-    Bolt.setWorking(true);
+    Taxi Bolt("Bohdan", "Koval", item1, false, "AX4046EC");
+    Taxi bolt2;
+    cin >> bolt2;
     //Bolt.setWorking(true);
-    Bolt.showInfo_for_customers();
+    bolt2.showInfo_for_workers();
     return 0;
 }

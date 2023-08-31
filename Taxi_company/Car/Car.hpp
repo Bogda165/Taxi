@@ -21,4 +21,6 @@ public:
     void showC()const;
     void show()const override;
     string type()const override;
+    
+    friend istream& operator >>(istream& is, Car& obj);
 };
