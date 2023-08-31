@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		88A4C8C12AA073D200BC7CC1 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 88A4C8C02AA073D200BC7CC1 /* main.cpp */; };
+		88A4C8C82AA0751500BC7CC1 /* Date.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 88A4C8C72AA0751500BC7CC1 /* Date.cpp */; };
+		88A4C8CD2AA0757200BC7CC1 /* Taxi.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 88A4C8CB2AA0757200BC7CC1 /* Taxi.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,12 @@
 /* Begin PBXFileReference section */
 		88A4C8BD2AA073D200BC7CC1 /* Taxi_company */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Taxi_company; sourceTree = BUILT_PRODUCTS_DIR; };
 		88A4C8C02AA073D200BC7CC1 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		88A4C8C72AA0751500BC7CC1 /* Date.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Date.cpp; sourceTree = "<group>"; };
+		88A4C8C92AA0751E00BC7CC1 /* Date.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Date.hpp; sourceTree = "<group>"; };
+		88A4C8CA2AA0752500BC7CC1 /* Car */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Car; sourceTree = "<group>"; };
+		88A4C8CB2AA0757200BC7CC1 /* Taxi.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Taxi.cpp; sourceTree = "<group>"; };
+		88A4C8CC2AA0757200BC7CC1 /* Taxi.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Taxi.hpp; sourceTree = "<group>"; };
+		88A4C8CE2AA0778800BC7CC1 /* Adress */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Adress; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +66,12 @@
 			isa = PBXGroup;
 			children = (
 				88A4C8C02AA073D200BC7CC1 /* main.cpp */,
+				88A4C8C72AA0751500BC7CC1 /* Date.cpp */,
+				88A4C8C92AA0751E00BC7CC1 /* Date.hpp */,
+				88A4C8CA2AA0752500BC7CC1 /* Car */,
+				88A4C8CB2AA0757200BC7CC1 /* Taxi.cpp */,
+				88A4C8CC2AA0757200BC7CC1 /* Taxi.hpp */,
+				88A4C8CE2AA0778800BC7CC1 /* Adress */,
 			);
 			path = Taxi_company;
 			sourceTree = "<group>";
@@ -119,7 +133,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88A4C8CD2AA0757200BC7CC1 /* Taxi.cpp in Sources */,
 				88A4C8C12AA073D200BC7CC1 /* main.cpp in Sources */,
+				88A4C8C82AA0751500BC7CC1 /* Date.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
